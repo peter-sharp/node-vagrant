@@ -5,6 +5,8 @@ This is light wrapper around vagrant CLI.
 It uses spawn process, and every command requiring user input
 such as init and destroy is created with switch --force or -f.
 
+With the option to use a custom callback for executing vagrant commands
+
 Installation
 ===
 
@@ -15,9 +17,9 @@ npm install node-vagrant --save
 Usage
 ===
 
-All callbacks are node style:
+uses q promises:
 ```
-function(err, out) { ...
+.then( function( err, out ) {})
 ```
 where err is stderr if exit code != 0 and out is stdout if exit code == 0
 ___
