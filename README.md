@@ -10,7 +10,7 @@ With the option to use a custom callback for executing vagrant commands
 Installation
 ===
 
-```
+```bash
 npm install node-vagrant --save
 ```
 
@@ -18,13 +18,13 @@ Usage
 ===
 
 uses q promises:
-```
+```javascript
 .then( function( err, out ) {})
 ```
 where err is stderr if exit code != 0 and out is stdout if exit code == 0
 ___
 Other commands
-```
+```javascript
 // import vagrant
 var vagrant = require('node-vagrant');
 
@@ -85,7 +85,7 @@ machine.snapshots().push(cb);
 
 Events
 ===
-```
+```javascript
 .on('up-progress', function(out) ... // receive stdout progress from up of vagrant
 
 .on('progress', function(out) ... // receive stdout box download progress
@@ -96,16 +96,16 @@ Example
 
 Example script of a usage is in example/example.js
 
-```
+```bash
 npm run example
 ```
 
 TODO
 ===
-- multi-machine
-- more detail vagrant file settings
+[ ] multi-machine
+[ ] more detail vagrant file settings
     - firewall
     - networking
-- boxing
-- ~~provisoning~~
-- ~~providers~~
+[ ] boxing
+[x] provisoning
+[x] providers
